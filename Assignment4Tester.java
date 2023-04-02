@@ -110,6 +110,8 @@ public class Assignment4Tester {
         assertEquals("i", ws.leastCommonWords(3)[1]);
         assertEquals(7, ws.wordRank("and"));
         assertEquals(7, ws.wordRank("i"));
+        assertEquals("test", ws.mostCommonCollocations(1, "me", false)[0]);
+        assertEquals("test", ws.mostCommonCollocations(1, "and", true)[0]);
 
 
         WordStat ws1 = new WordStat(new String[]{"hello test this is a test and I am testing the wordstat method this is a test hello", "hello hi test\n" +
@@ -136,5 +138,7 @@ public class Assignment4Tester {
         assertEquals("i", ws1.leastCommonWords(3)[1]);
         assertEquals(7, ws1.wordRank("and"));
         assertEquals(7, ws1.wordRank("i"));
+        assertEquals("test", ws1.mostCommonCollocations(1, "me", false)[0]);
+        assertEquals("test", ws1.mostCommonCollocations(1, "and", true)[0]);
     }
 }
